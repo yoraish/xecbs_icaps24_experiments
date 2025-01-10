@@ -1,0 +1,27 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/yoraish/code/mramp/mramp_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/yoraish/code/mramp/mramp_ws/src/ros_kortex/third_party/gazebo-pkgs/gazebo_version_helpers/include/**",
+        "/home/yoraish/code/mramp/mramp_ws/src/ros_kortex/kortex_driver/include/**",
+        "/home/yoraish/code/mramp/mramp_ws/src/manipulation_planning/include/**",
+        "/home/yoraish/code/mramp/mramp_ws/src/mramp/include/**",
+        "/home/yoraish/code/mramp/mramp_ws/src/ros_kortex/third_party/roboticsgroup_upatras_gazebo_plugins/include/**",
+        "/home/yoraish/code/mramp/mramp_ws/src/isaac_moveit/universal_robot/ur_kinematics/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

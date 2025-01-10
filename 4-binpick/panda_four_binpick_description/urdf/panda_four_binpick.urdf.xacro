@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="panda">
+  <xacro:arg name="arm_id_0" default="panda0" />
+  <xacro:arg name="arm_id_1" default="panda1" />
+  <xacro:arg name="arm_id_2" default="panda2" />
+  <xacro:arg name="arm_id_3" default="panda3" />
+
+  <xacro:include filename="$(find moveit_resources_panda_description)/urdf/panda_arm.xacro"/>
+  <xacro:include filename="$(find moveit_resources_panda_description)/urdf/hand.xacro"/>
+
+  <!-- box shaped table as base for the 4 Pandas -->
+  <link name="base">
+    <visual>
+      <origin xyz="0 0 0.05" rpy="0 0 0"/>
+      <geometry>
+        <box size="2 2 0.1" />
+      </geometry>
+      <material name="Pastel Gray">
+        <color rgba="0.7 0.7 0.7 0.2"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.05" rpy="0 0 0"/>
+      <geometry>
+        <box size="2 2 0.1" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="base_link_to_crate0_joint" type="fixed">
+    <parent link="base"/>
+    <child link="crate0"/>
+    <origin xyz="0.53 0.1 0.1" rpy="0 0 1.57"/>
+  </joint>
+
+  <link name="crate0">
+    <visual>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://mramp/stl/crate.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </visual>
+    <!-- <collision>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://mramp/stl/crate.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision> -->
+  </link>
+
+  <joint name="base_link_to_crate_joint" type="fixed">
+    <parent link="base"/>
+    <child link="crate"/>
+    <origin xyz="0.13 0.1 0.1" rpy="0 0 1.57"/>
+  </joint>
+
+  <link name="crate">
+    <visual>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://mramp/stl/crate.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </visual>
+    <!-- <collision>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://mramp/stl/crate.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision> -->
+  </link>
+
+  <joint name="base_link_to_crate1_joint" type="fixed">
+    <parent link="base"/>
+    <child link="crate1"/>
+    <origin xyz="-0.27 0.1 0.1" rpy="0 0 1.57"/>
+  </joint>
+
+  <link name="crate1">
+    <visual>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://mramp/stl/crate.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </visual>
+    <!-- <collision>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://mramp/stl/crate.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision> -->
+  </link>
+
+  <joint name="base_link_to_crate2_joint" type="fixed">
+    <parent link="base"/>
+    <child link="crate2"/>
+    <origin xyz="-0.67 0.1 0.1" rpy="0 0 1.57"/>
+  </joint>
+
+  <link name="crate2">
+    <visual>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://mramp/stl/crate.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </visual>
+    <!-- <collision>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://mramp/stl/crate.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision> -->
+  </link>
+
+  <joint name="base_link_to_lamp0_joint" type="fixed">
+    <parent link="base"/>
+    <child link="lamp0"/>
+    <origin xyz="0.5 0.0 0.8" rpy="0 0 0"/>
+  </joint>
+  <link name="lamp0">
+    <visual>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://mramp/stl/lamp.stl" scale="0.000027 0.000027 0.000027"/>
+      </geometry>
+    </visual>
+    <!-- <collision>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://mramp/stl/crate.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision> -->
+  </link>
+
+  <joint name="base_link_to_lamp1_joint" type="fixed">
+    <parent link="base"/>
+    <child link="lamp1"/>
+    <origin xyz="0.0 0.0 1.13" rpy="0 0 0"/>
+  </joint>
+  <link name="lamp1">
+    <visual>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://mramp/stl/lamp.stl" scale="0.000027 0.000032 0.000032"/>
+      </geometry>
+    </visual>
+    <!-- <collision>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://mramp/stl/crate.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision> -->
+  </link>
+
+  <joint name="base_link_to_lamp2_joint" type="fixed">
+    <parent link="base"/>
+    <child link="lamp2"/>
+    <origin xyz="-0.5 0.0 0.8" rpy="0 0 0"/>
+  </joint>
+  <link name="lamp2">
+    <visual>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://mramp/stl/lamp.stl" scale="0.000027 0.000027 0.000027"/>
+      </geometry>
+    </visual>
+    <!-- <collision>
+      <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="package://mramp/stl/crate.stl" scale="0.01 0.01 0.01"/>
+      </geometry>
+    </collision> -->
+  </link>
+
+  <!-- panda_0 with gripper -->
+  <xacro:panda_arm arm_id="$(arg arm_id_0)" connected_to="base"  xyz="0.4 -0.4 0.1" rpy="0 0 2.28"/>
+  <xacro:hand ns="$(arg arm_id_0)" rpy="0 0 0" connected_to="$(arg arm_id_0)_link8"/>
+
+  <!-- panda1 with gripper -->
+  <xacro:panda_arm arm_id="$(arg arm_id_1)" connected_to="base"  xyz="-0.4 -0.4 0.1" rpy="0 0 0.66"/>
+  <xacro:hand ns="$(arg arm_id_1)" rpy="0 0 0" connected_to="$(arg arm_id_1)_link8"/>
+
+  <!-- panda2 with gripper -->
+  <xacro:panda_arm arm_id="$(arg arm_id_2)" connected_to="base"  xyz="-0.4 0.4 0.1" rpy="0 0 -0.66"/>
+  <xacro:hand ns="$(arg arm_id_2)" rpy="0 0 0" connected_to="$(arg arm_id_2)_link8"/>
+
+  <!-- panda3 with gripper -->
+  <xacro:panda_arm arm_id="$(arg arm_id_3)" connected_to="base"  xyz="0.4 0.4 0.1" rpy="0 0 -2.28"/>
+  <xacro:hand ns="$(arg arm_id_3)" rpy="0 0 0" connected_to="$(arg arm_id_3)_link8"/>
+</robot>
+

@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: ""
+    relative_path: /home/yoraish/code/mramp/mramp_ws/src/mramp_moveit_resources/panda_four_binpick_description/urdf/panda_four_binpick.urdf.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/panda.srdf
+  CONFIG:
+    author_name: Yorai
+    author_email: yorai@cmu.edu
+    generated_timestamp: 1701495331

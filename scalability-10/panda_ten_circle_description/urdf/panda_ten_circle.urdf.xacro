@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="panda">
+  <xacro:arg name="arm_id_0" default="panda0" />
+  <xacro:arg name="arm_id_1" default="panda1" />
+  <xacro:arg name="arm_id_2" default="panda2" />
+  <xacro:arg name="arm_id_3" default="panda3" />
+  <xacro:arg name="arm_id_4" default="panda4" />
+  <xacro:arg name="arm_id_5" default="panda5" />
+  <xacro:arg name="arm_id_6" default="panda6" />
+  <xacro:arg name="arm_id_7" default="panda7" />
+  <xacro:arg name="arm_id_8" default="panda8" />
+  <xacro:arg name="arm_id_9" default="panda9" />
+
+  <xacro:include filename="$(find moveit_resources_panda_description)/urdf/panda_arm.xacro"/>
+  <xacro:include filename="$(find moveit_resources_panda_description)/urdf/hand.xacro"/>
+
+  <!-- box shaped table as base for the 2 Pandas -->
+  <link name="base">
+    <visual>
+      <origin xyz="0 0 0.05" rpy="0 0 0"/>
+      <geometry>
+        <box size="2 2 0.1" />
+      </geometry>
+      <material name="Pastel Gray">
+        <color rgba="0.7 0.7 0.7 0.2"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.05" rpy="0 0 0"/>
+      <geometry>
+        <box size="2 2 0.1" />
+      </geometry>
+    </collision>
+  </link>
+
+    <!-- Add a visual box. -->
+  <link name="plank">
+    <visual>
+      <origin xyz="0 0 0.7" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.3 0.8 0.02" />
+      </geometry>
+      <material name="Pastel Gray">
+        <color rgba="0.7 0.7 0.7 0.2"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="plank_joint" type="fixed">
+    <parent link="base"/>
+    <child link="plank"/>
+    <origin xyz="0 0 0.0" rpy="0 0 0"/>
+  </joint>
+
+  <xacro:panda_arm arm_id="$(arg arm_id_0)" connected_to="base" xyz="0.77 0.0 0.1" rpy="0 0 3.14"/>
+  <xacro:hand ns="$(arg arm_id_0)" rpy="0 0 0" connected_to="$(arg arm_id_0)_link8"/>
+  <xacro:panda_arm arm_id="$(arg arm_id_1)" connected_to="base" xyz="0.62 0.45 0.1" rpy="0 0 3.77"/>
+  <xacro:hand ns="$(arg arm_id_1)" rpy="0 0 0" connected_to="$(arg arm_id_1)_link8"/>
+  <xacro:panda_arm arm_id="$(arg arm_id_2)" connected_to="base" xyz="0.24 0.73 0.1" rpy="0 0 4.4"/>
+  <xacro:hand ns="$(arg arm_id_2)" rpy="0 0 0" connected_to="$(arg arm_id_2)_link8"/>
+  <xacro:panda_arm arm_id="$(arg arm_id_3)" connected_to="base" xyz="-0.24 0.73 0.1" rpy="0 0 5.03"/>
+  <xacro:hand ns="$(arg arm_id_3)" rpy="0 0 0" connected_to="$(arg arm_id_3)_link8"/>
+  <xacro:panda_arm arm_id="$(arg arm_id_4)" connected_to="base" xyz="-0.62 0.45 0.1" rpy="0 0 5.65"/>
+  <xacro:hand ns="$(arg arm_id_4)" rpy="0 0 0" connected_to="$(arg arm_id_4)_link8"/>
+  <xacro:panda_arm arm_id="$(arg arm_id_5)" connected_to="base" xyz="-0.77 0.0 0.1" rpy="0 0 6.28"/>
+  <xacro:hand ns="$(arg arm_id_5)" rpy="0 0 0" connected_to="$(arg arm_id_5)_link8"/>
+  <xacro:panda_arm arm_id="$(arg arm_id_6)" connected_to="base" xyz="-0.62 -0.45 0.1" rpy="0 0 6.91"/>
+  <xacro:hand ns="$(arg arm_id_6)" rpy="0 0 0" connected_to="$(arg arm_id_6)_link8"/>
+  <xacro:panda_arm arm_id="$(arg arm_id_7)" connected_to="base" xyz="-0.24 -0.73 0.1" rpy="0 0 7.54"/>
+  <xacro:hand ns="$(arg arm_id_7)" rpy="0 0 0" connected_to="$(arg arm_id_7)_link8"/>
+  <xacro:panda_arm arm_id="$(arg arm_id_8)" connected_to="base" xyz="0.24 -0.73 0.1" rpy="0 0 8.17"/>
+  <xacro:hand ns="$(arg arm_id_8)" rpy="0 0 0" connected_to="$(arg arm_id_8)_link8"/>
+  <xacro:panda_arm arm_id="$(arg arm_id_9)" connected_to="base" xyz="0.62 -0.45 0.1" rpy="0 0 8.8"/>
+  <xacro:hand ns="$(arg arm_id_9)" rpy="0 0 0" connected_to="$(arg arm_id_9)_link8"/>
+
+
+</robot>

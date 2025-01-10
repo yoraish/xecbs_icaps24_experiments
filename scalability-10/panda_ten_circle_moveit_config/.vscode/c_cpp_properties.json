@@ -1,0 +1,24 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/path/to/my/ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/path/to/my/ws/src/manipulation_planning/include/**",
+        "/path/to/my/ws/src/mramp/include/**",
+        "/path/to/my/ws/src/isaac_moveit/universal_robot/ur_kinematics/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

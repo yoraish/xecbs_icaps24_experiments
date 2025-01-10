@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: ""
+    relative_path: /path/to/my/ws/src/panda_ten_circle_description/urdf/panda_ten_circle.urdf.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/panda.srdf
+  CONFIG:
+    author_name: Yorai
+    author_email: yorai@cmu.edu
+    generated_timestamp: 1701960955

@@ -1,0 +1,257 @@
+controller_list:
+  - name: fake_panda0_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - panda0_joint1
+      - panda0_joint2
+      - panda0_joint3
+      - panda0_joint4
+      - panda0_joint5
+      - panda0_joint6
+      - panda0_joint7
+  - name: fake_panda0_hand_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - panda0_finger_joint1
+  - name: fake_panda1_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - panda1_joint1
+      - panda1_joint2
+      - panda1_joint3
+      - panda1_joint4
+      - panda1_joint5
+      - panda1_joint6
+      - panda1_joint7
+  - name: fake_panda1_hand_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - panda1_finger_joint1
+  - name: fake_panda2_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - panda2_joint1
+      - panda2_joint2
+      - panda2_joint3
+      - panda2_joint4
+      - panda2_joint5
+      - panda2_joint6
+      - panda2_joint7
+  - name: fake_panda2_hand_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - panda2_finger_joint1
+  - name: fake_panda3_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - panda3_joint1
+      - panda3_joint2
+      - panda3_joint3
+      - panda3_joint4
+      - panda3_joint5
+      - panda3_joint6
+      - panda3_joint7
+  - name: fake_panda3_hand_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - panda3_finger_joint1
+  - name: fake_panda_multi_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - panda0_joint1
+      - panda0_joint2
+      - panda0_joint3
+      - panda0_joint4
+      - panda0_joint5
+      - panda0_joint6
+      - panda0_joint7
+      - panda1_joint1
+      - panda1_joint2
+      - panda1_joint3
+      - panda1_joint4
+      - panda1_joint5
+      - panda1_joint6
+      - panda1_joint7
+      - panda2_joint1
+      - panda2_joint2
+      - panda2_joint3
+      - panda2_joint4
+      - panda2_joint5
+      - panda2_joint6
+      - panda2_joint7
+      - panda3_joint1
+      - panda3_joint2
+      - panda3_joint3
+      - panda3_joint4
+      - panda3_joint5
+      - panda3_joint6
+      - panda3_joint7
+      - panda4_joint1
+      - panda4_joint2
+      - panda4_joint3
+      - panda4_joint4
+      - panda4_joint5
+      - panda4_joint6
+      - panda4_joint7
+      - panda5_joint1
+      - panda5_joint2
+      - panda5_joint3
+      - panda5_joint4
+      - panda5_joint5
+      - panda5_joint6
+      - panda5_joint7
+      - panda6_joint1
+      - panda6_joint2
+      - panda6_joint3
+      - panda6_joint4
+      - panda6_joint5
+      - panda6_joint6
+      - panda6_joint7
+      - panda7_joint1
+      - panda7_joint2
+      - panda7_joint3
+      - panda7_joint4
+      - panda7_joint5
+      - panda7_joint6
+      - panda7_joint7
+      - panda8_joint1
+      - panda8_joint2
+      - panda8_joint3
+      - panda8_joint4
+      - panda8_joint5
+      - panda8_joint6
+      - panda8_joint7
+      - panda9_joint1
+      - panda9_joint2
+      - panda9_joint3
+      - panda9_joint4
+      - panda9_joint5
+      - panda9_joint6
+      - panda9_joint7
+  - name: fake_panda4_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - panda4_joint1
+      - panda4_joint2
+      - panda4_joint3
+      - panda4_joint4
+      - panda4_joint5
+      - panda4_joint6
+      - panda4_joint7
+  - name: fake_panda4_hand_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - panda4_finger_joint1
+  - name: fake_panda5_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - panda5_joint1
+      - panda5_joint2
+      - panda5_joint3
+      - panda5_joint4
+      - panda5_joint5
+      - panda5_joint6
+      - panda5_joint7
+  - name: fake_panda5_hand_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - panda5_finger_joint1
+  - name: fake_panda6_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - panda6_joint1
+      - panda6_joint2
+      - panda6_joint3
+      - panda6_joint4
+      - panda6_joint5
+      - panda6_joint6
+      - panda6_joint7
+  - name: fake_panda6_hand_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - panda6_finger_joint1
+  - name: fake_panda7_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - panda7_joint1
+      - panda7_joint2
+      - panda7_joint3
+      - panda7_joint4
+      - panda7_joint5
+      - panda7_joint6
+      - panda7_joint7
+  - name: fake_panda7_hand_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - panda7_finger_joint1
+  - name: fake_panda8_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - panda8_joint1
+      - panda8_joint2
+      - panda8_joint3
+      - panda8_joint4
+      - panda8_joint5
+      - panda8_joint6
+      - panda8_joint7
+  - name: fake_panda8_hand_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - panda8_finger_joint1
+  - name: fake_panda9_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - panda9_joint1
+      - panda9_joint2
+      - panda9_joint3
+      - panda9_joint4
+      - panda9_joint5
+      - panda9_joint6
+      - panda9_joint7
+  - name: fake_panda9_hand_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - panda9_finger_joint1
+initial:  # Define initial robot poses per group
+  - group: panda0_arm
+    pose: ready
+  - group: panda0_hand
+    pose: close
+  - group: panda1_arm
+    pose: ready
+  - group: panda1_hand
+    pose: close
+  - group: panda2_arm
+    pose: ready
+  - group: panda2_hand
+    pose: close
+  - group: panda3_arm
+    pose: ready
+  - group: panda3_hand
+    pose: close
+  - group: panda_multi_arm
+    pose: ready
+  - group: panda4_arm
+    pose: ready
+  - group: panda4_hand
+    pose: close
+  - group: panda5_arm
+    pose: ready
+  - group: panda5_hand
+    pose: close
+  - group: panda6_arm
+    pose: ready
+  - group: panda6_hand
+    pose: close
+  - group: panda7_arm
+    pose: ready
+  - group: panda7_hand
+    pose: close
+  - group: panda8_arm
+    pose: ready
+  - group: panda8_hand
+    pose: closed
+  - group: panda9_arm
+    pose: ready
+  - group: panda9_hand
+    pose: closed

@@ -1,0 +1,12 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/yoraish/code/mramp/mramp_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages",
+        "/home/yoraish/Software/isaacgym/python"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/yoraish/code/mramp/mramp_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages",
+        "/home/yoraish/Software/isaacgym/python"
+    ]
+}
